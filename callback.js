@@ -7,10 +7,16 @@ function mySandwich(param1, param2, callback) {
 	}  
 }  
   
-mySandwich('ham', 'cheese', function(correct) {
-	if(correct) {
+mySandwich('ham', 'cheese', function(madeCorrectly) {
+	if(madeCorrectly) {
 		alert("Finished eating my " + this.toppings[0] + " and " + this.toppings[1] + " sandwich.");
 	} else {
 		alert("Gross!  Why would I eat a " + this.toppings[0] + " and " + this.toppings[1] + " sandwich?");
 	}
 });
+
+var me = {}
+
+me.mySandwich = mysandwich
+
+var awesome = console.log(me.mySandwich('ham', 'cheese', function(madeCorrectly)))
