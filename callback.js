@@ -1,22 +1,23 @@
-function mySandwich(param1, param2, callback) {
-	alert('Started eating my sandwich.\n\nIt has: ' + param1 + ', ' + param2);
-	var sandwich = {toppings: [param1, param2]},
-		madeCorrectly = (typeof(param1) === "string" && typeof(param2) === "string") ? true : false;
-	if (callback && typeof(callback) === "function") {  
-        callback.apply(sandwich, [madeCorrectly]);  
-	}  
-}  
+// function mySandwich(param1, param2, callback) {
+// 	alert('Started eating my sandwich.\n\nIt has: ' + param1 + ', ' + param2);
+// 	var sandwich = {toppings: [param1, param2]},
+// 		madeCorrectly = (typeof(param1) === "string" && typeof(param2) === "string") ? true : false;
+// 	if (callback && typeof(callback) === "function") {  
+//         callback.apply(sandwich, [madeCorrectly]);  
+// 	}  
+// }  
   
-mySandwich('ham', 'cheese', function(madeCorrectly) {
-	if(madeCorrectly) {
-		alert("Finished eating my " + this.toppings[0] + " and " + this.toppings[1] + " sandwich.");
-	} else {
-		alert("Gross!  Why would I eat a " + this.toppings[0] + " and " + this.toppings[1] + " sandwich?");
-	}
-});
+// mySandwich('ham', 'cheese', function(madeCorrectly) {
+// 	if(madeCorrectly) {
+// 		alert("Finished eating my " + this.toppings[0] + " and " + this.toppings[1] + " sandwich.");
+// 	} else {
+// 		alert("Gross!  Why would I eat a " + this.toppings[0] + " and " + this.toppings[1] + " sandwich?");
+// 	}
+// });
 
-var me = {}
+// var me = {}
 
-me.mySandwich = mysandwich
+// me.mySandwich = mySandwich
 
-var awesome = console.log(me.mySandwich('ham', 'cheese', function(madeCorrectly)))
+// me.mySandwich('ham', 'cheese', function(madeCorrectly))
+

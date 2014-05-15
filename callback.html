@@ -17,12 +17,20 @@
 <body>
   <p id="sandwich">An optional callback function example.</p>
   
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="callback.js"></script>
 
-  <script>var me = {}
+  <script>
 
-me.mySandwich = mysandwich
+  var dog = {name: "buddy"};
 
-var awesome = console.log(me.mySandwich('ham', 'cheese', function(madeCorrectly)))</script>
+  var sayName = function() {
+  	return dog.name;
+  };
+
+  dog.sayName = sayName;
+
+  document.write(dog.sayName());
+
+</script>
 </body>
 </html>
